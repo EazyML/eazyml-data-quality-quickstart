@@ -1,0 +1,24 @@
+-h, --help                  :   Help
+-u, --username              :   EazyML username
+-p, --api_key               :   EazyML api_key. User can download it from UI (MyAccount->API)
+-x, --prefix_name           :   Prefix to be used while saving response.
+-f, --train_file            :   Train filename with absolute path.
+-o, --outcome               :   Outcome column name. It must be provided if train filename is provided.
+-i, --id_col                :   Id col in train data.
+-c, --discard_col_list      :   Comma separated list of columns which user wants to discard
+                                in the train data.
+-u, --impute                :   Pass --impute if want to do imputation for data quality assessment,
+                                default is "no".
+-r, --remove_outliers       :   Pass --remove_outlier if want to remove outliers
+                                for data quality assessment, default is "no".
+-s, --data_shape            :   Perform data quality shape assessment.
+-b, --data_balance          :   Perform data balance assessment.
+-e, --data_emptiness        :   Perform data emptiness assessment.
+-l, --data_outliers         :   Pass --outlier to get outliers in the data.
+-n, --data_correlation      :   Perform data correlation assessment.
+-d, --data_drift            :   Perform data drift assessment.
+-m, --model_drift           :   Perform model drift assessment.
+-t, --feature_importance    :   Get feature importance.
+-a, --data_completeness     :   Perform data completeness assessment.
+-g, --data_correctness      :   Perform data correctness assessment.
+-z, --test_file             :   Test filename with absolute path.
