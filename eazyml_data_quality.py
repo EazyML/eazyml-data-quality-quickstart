@@ -2,7 +2,6 @@ import os
 import json
 import sys
 import getopt
-sys.path.append("../client_code")
 import eazyml as ez
 
 AUTH_FILE = "authentication.json"
