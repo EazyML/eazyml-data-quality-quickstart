@@ -39,7 +39,7 @@ def eazyml_auth(username, api_key, store_info=True):
 def eazyml_data_quality(username, api_key, train_file_path=None, prefix="",
                         id_col="null", discard_col_list=[], shape="no",
                         balance="no", emptiness="no", impute="no",
-                        outliers="no", remove_outlier="no", correlation="no",
+                        outliers="no", remove_outliers="no", correlation="no",
                         data_drift="no", model_drift="no",
                         feature_importance="no", completeness="no",
                         correctness="no", outcome=None, test_file_path=None):
@@ -72,7 +72,7 @@ def eazyml_data_quality(username, api_key, train_file_path=None, prefix="",
     else:
         accelerate = "yes"
 
-    if remove_outlier == "yes" and outliers == "no":
+    if remove_outliers == "yes" and outliers == "no":
         outliers = "yes"
 
     options = {"data_shape": shape,
@@ -80,7 +80,7 @@ def eazyml_data_quality(username, api_key, train_file_path=None, prefix="",
                "data_emptiness": emptiness,
                "impute": impute,
                "data_outliers": outliers,
-               "remove_outlier": remove_outlier,
+               "remove_outliers": remove_outliers,
                "outcome_correlation": correlation,
                "data_drift": data_drift,
                "model_drift": model_drift,
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     discard_col_list = []
     shape = balance = "no"
     emptiness = impute = "no"
-    outliers = remove_outlier = "no"
+    outliers = remove_outliers = "no"
     correlation = "no"
     data_drift = model_drift = "no"
     feature_importance = completeness = correctness = "no"
@@ -173,7 +173,7 @@ if __name__ == "__main__":
             elif curr_arg in ("-l", "--data_outliers"):
                 outliers = "yes"
             elif curr_arg in ("-r", "--remove_outliers"):
-                remove_outlier = "yes"
+                remove_outliers = "yes"
             elif curr_arg in ("-n", "--data_correlation"):
                 correlation = "yes"
             elif curr_arg in ("-d", "--data_drift"):
@@ -190,7 +190,7 @@ if __name__ == "__main__":
                 test_file_path = curr_val
         eazyml_data_quality(username, api_key, train_file_path, prefix_name,
                             id_col, discard_col_list, shape, balance,
-                            emptiness, impute, outliers, remove_outlier,
+                            emptiness, impute, outliers, remove_outliers,
                             correlation, data_drift, model_drift,
                             feature_importance, completeness, correctness,
                             outcome, test_file_path)

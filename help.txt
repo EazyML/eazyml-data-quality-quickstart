@@ -9,7 +9,7 @@
                                 in the train data.
 -u, --impute                :   Pass --impute if want to do imputation for data quality assessment,
                                 default is "no".
--r, --remove_outliers       :   Pass --remove_outlier if want to remove outliers
+-r, --remove_outliers       :   Pass --remove_outliers if want to remove outliers
                                 for data quality assessment, default is "no".
 -s, --data_shape            :   Perform data quality shape assessment.
 -b, --data_balance          :   Perform data balance assessment.
